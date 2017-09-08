@@ -8,7 +8,7 @@ Route::get('/threads', function() {
 });
 
 Route::get('/', function() {
-	return view('threads.greeting');
+	return view('messages.hello');
 });
 
 Route::get('/threads/create', function() {
