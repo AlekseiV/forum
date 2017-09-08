@@ -8,7 +8,8 @@ Route::get('/threads', function() {
 });
 
 Route::get('/', function() {
-	return view('messages.hello');
+	$name = "Aleksei";
+	return view('messages.hello' , compact("name"));
 });
 
 Route::get('/threads/create', function() {

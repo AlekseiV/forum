@@ -5,12 +5,13 @@
     <title></title>
   </head>
   <body>
-    <h1>Hello, TEMP</h1>
 
     <?php
     $nafn = array("Aleksei", "Samuel", "Gretar");
     echo "My name is " . $nafn[0];
     ?>
-    
+
+    <h1>Hello, {{ $name }} </h1>
+
   </body>
 </html>
