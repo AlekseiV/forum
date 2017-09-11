@@ -5,6 +5,6 @@
     <title></title>
   </head>
   <body>
-    <h1>Hello, I am Aleksei</h1>
+    <h1>This is greeting number {{$id}} with {{$count}} replies</h1>
   </body>
 </html>
