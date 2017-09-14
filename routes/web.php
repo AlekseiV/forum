@@ -2,21 +2,17 @@
 
 Auth::routes();
 
+Route::get('/', 'GreetingController@greeting');
 
-Route::get('/threads', function() {
-	return view('threads.index');
-});
-
-Route::get('/', 'GreetingController@show');
+Route::get('/threads', 'ThreadsController@index');
+Route::get('threads/create', 'ThreadsController@create');
+Route::get('threads/{id}', 'ThreadsController@show');
 
 // Route::get('/', function() {
 // 	$name = "Aleksei";
 // 	return view('messages.hello' , compact("name"));
 // });
 
-Route::get('/threads/create', function() {
-	return view('threads.create');
-});
 
 Route::get('/greeting/{id}', function($id) {
 	$greetings = ["Velkominn á síðuna", "Bonjour", "Siema", "Здра́вствуйте", "Welcome on the site"];
