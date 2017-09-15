@@ -11,7 +11,7 @@
             <ul class="list-group">
 
               <div class="list-group-item">
-                <p>Thread body</p>
+                  <p>Thread body</p>
               </div>
 
             </ul>
