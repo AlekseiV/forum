@@ -23,14 +23,8 @@
                       <p><a href="#" class="btn btn-primary" role="button">Publish</a>
                   </div>
                 </div>
-                @foreach ($countries as $country)
-                  @if ($country == "Island")
-                    <h1>{{ $country }}</h1>
-                  @else
-                    <p>{{ $country }}</p>
-                  @endif
-                @endforeach
             </div>
+
     </div>
 </div>
 @endsection
