@@ -11,7 +11,7 @@
                 <div class="panel-heading"><b> {{ $thread->title }} </b></div>
                 <ul class="list-group">
                   <div class="list-group-item">
-                    {{ $thread->message}}
+                    {{ $thread->message }}
                   </div>
                 </ul>
               </div>
