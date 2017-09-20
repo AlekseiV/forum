@@ -19,11 +19,20 @@
                       <div class="form-group">
                       <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
                       </div>
-
                       <p><a href="#" class="btn btn-primary" role="button">Publish</a>
                   </div>
                 </div>
             </div>
+
+            <ol>
+            @foreach ($tasks as $task)
+              @if ( ! $task["complete"])
+                <li><a href="{{$task["anchor"]}}">{{$task["title"]}}</a></li>
+              @else
+                <li><s><a href="{{$task["anchor"]}}">{{$task["title"]}}</a></s></li>
+              @endif
+            @endforeach
+            </ol>
 
     </div>
 </div>

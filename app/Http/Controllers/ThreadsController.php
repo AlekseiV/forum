@@ -12,8 +12,14 @@ class ThreadsController extends Controller
     }
 
     public function create(){
-      $countries = ["Island", "Island", "Irland", "Island", "Irland"];
-      return view('threads.create', compact("countries"));
+      $tasks = [
+      ["title" => "Klara A", "complete" => true, "anchor" => "http://A.is"],
+      ["title" => "Klara B", "complete" => false, "anchor" => "http://B.is"],
+      ["title" => "Klara C", "complete" => false, "anchor" => "http://C.is"],
+      ["title" => "Klara D", "complete" => true, "anchor" => "http://D.is"],
+      ["title" => "Klara E", "complete" => true, "anchor" => "http://E.is"],
+    ];
+      return view('threads.create', compact("tasks"));
     }
 
     public function show($id){
