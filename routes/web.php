@@ -7,7 +7,8 @@ Route::get('/greeting/{id}', 'GreetingController@greetindex')->where(['id' => '[
 
 
 Route::get('/threads', 'ThreadsController@index');
-Route::get('/threads/create', 'ThreadsController@create');
+Route::post('/threads', 'ThreadsController@store');
+Route::get('/threads/create', 'ThreadsController@create')->middleware("auth");
 Route::get('/threads/{id}', 'ThreadsController@show');
 
 Route::get('/profile', 'ProfileController@index');

@@ -26,4 +26,8 @@ class ThreadsController extends Controller
       $thread = DB::select("select * from threads where id=?", [$id]);
       return view('threads.show', compact("thread"));
     }
+
+    public function store(){
+      dd("store method");
+    }
 }

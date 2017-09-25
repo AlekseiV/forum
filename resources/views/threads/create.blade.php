@@ -9,22 +9,27 @@
                     <h3 class="panel-title">Create a New Thread</h3>
                   </div>
                   <div class="panel-body">
-                    <b>Title:</b>
-                      <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon1"></span>
-                        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-                      </div>
-                      <br>
-                    <b>Body:</b>
-                      <div class="form-group">
-                      <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
-                      </div>
-                      <p><a href="#" class="btn btn-primary" role="button">Publish</a>
+                    <form class="" action="/threads" method="post">
+
+                      {{ csrf_field() }}
+
+                      <b>Title:</b>
+                        <div class="input-group">
+                          <span class="input-group-addon" id="basic-addon1"></span>
+                          <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <br>
+                      <b>Body:</b>
+                        <div class="form-group">
+                        <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+                        </div>
+                        <p><button type="submit"   class="btn btn-primary" >Publish</button>
+                      </form>
                   </div>
                 </div>
             </div>
 
-            <ol>
+            <!-- <ol>
             @foreach ($tasks as $task)
               @if ( ! $task["complete"])
                 <li><a href="{{$task["anchor"]}}">{{$task["title"]}}</a></li>
@@ -32,7 +37,7 @@
                 <li><s><a href="{{$task["anchor"]}}">{{$task["title"]}}</a></s></li>
               @endif
             @endforeach
-            </ol>
+            </ol> -->
 
     </div>
 </div>
