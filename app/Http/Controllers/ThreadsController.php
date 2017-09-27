@@ -7,23 +7,16 @@ use Illuminate\Support\Facades\DB;
 class ThreadsController extends Controller
 {
     public function index(){
-      $threads = DB::select("select * from threads");
+      $threads = DB::table("threads")->get();
       return view('threads.index', compact("threads"));
     }
 
     public function create(){
-      $tasks = [
-      ["title" => "Klara A", "complete" => true, "anchor" => "http://A.is"],
-      ["title" => "Klara B", "complete" => false, "anchor" => "http://B.is"],
-      ["title" => "Klara C", "complete" => false, "anchor" => "http://C.is"],
-      ["title" => "Klara D", "complete" => true, "anchor" => "http://D.is"],
-      ["title" => "Klara E", "complete" => true, "anchor" => "http://E.is"],
-    ];
-      return view('threads.create', compact("tasks"));
+      return view('threads.create');
     }
 
     public function show($id){
-      $thread = DB::select("select * from threads where id=?", [$id]);
+      $thread = DB::table("threads")->where("id", $id)->first();
       return view('threads.show', compact("thread"));
     }
 

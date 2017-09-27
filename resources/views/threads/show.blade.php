@@ -6,11 +6,11 @@
         <div class="col-md-8 col-md-offset-2">
           <div class="panel panel-default">
             <!-- Default panel contents -->
-            <div class="panel-heading"><b>{{ $thread[0]->title }}</b></div>
+            <div class="panel-heading"><b>{{ $thread->title }}</b></div>
             <ul class="list-group">
 
               <div class="list-group-item">
-                  {{ $thread[0]->message }}
+                  {{ $thread->message }}
               </div>
 
             </ul>

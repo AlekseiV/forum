@@ -28,17 +28,6 @@
                   </div>
                 </div>
             </div>
-
-            <!-- <ol>
-            @foreach ($tasks as $task)
-              @if ( ! $task["complete"])
-                <li><a href="{{$task["anchor"]}}">{{$task["title"]}}</a></li>
-              @else
-                <li><s><a href="{{$task["anchor"]}}">{{$task["title"]}}</a></s></li>
-              @endif
-            @endforeach
-            </ol> -->
-
     </div>
 </div>
 @endsection
