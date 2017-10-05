@@ -16,14 +16,14 @@
                       <b>Title:</b>
                         <div class="input-group">
                           <span class="input-group-addon" id="basic-addon1"></span>
-                          <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                          <input type="text" name="title" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
                         </div>
                         <br>
                       <b>Body:</b>
                         <div class="form-group">
-                        <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+                        <textarea class="form-control" name="message" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
                         </div>
-                        <p><button type="submit"   class="btn btn-primary" >Publish</button>
+                        <p><button type="submit" class="btn btn-primary" >Publish</button>
                       </form>
                   </div>
                 </div>

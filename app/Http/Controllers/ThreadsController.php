@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Thread;
 
 class ThreadsController extends Controller
 {
     public function index(){
-      $threads = DB::table("threads")->get();
+      $threads = Thread::all();
+      //$threads = DB::table("threads")->get(); Alveg það sama og fyrir ofan.
       return view('threads.index', compact("threads"));
     }
 
@@ -20,7 +22,14 @@ class ThreadsController extends Controller
       return view('threads.show', compact("thread"));
     }
 
-    public function store(){
-      dd("store method");
+    public function store(Request $request){
+      $thread = new Thread;
+      $thread->title = $request->title;
+      $thread->message = $request->message;
+      $thread->eigandi = 1;
+      $thread->save();
+
+      return redirect("/threads");
     }
+
 }
