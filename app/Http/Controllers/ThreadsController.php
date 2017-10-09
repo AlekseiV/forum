@@ -7,7 +7,7 @@ use App\Thread;
 
 class ThreadsController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
       $threads = Thread::all();
       //$threads = DB::table("threads")->get(); Alveg það sama og fyrir ofan.
       return view('threads.index', compact("threads"));
